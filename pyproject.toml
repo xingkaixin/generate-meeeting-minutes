@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "generate-meeeting-minutes"
+version = "0.1.0"
+description = ""
+authors = ["XingKaiXin <xingkaixin@gmail.com>"]
+readme = "README.md"
+packages = [{include = "generate_meeeting_minutes"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pathlib = "^1.0.1"
+openai = "^0.27.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+
+
+[tool.flake8]
+max-line-length = 120
+exclude = "**/__init__.py"
+
+[tool.pylint.messages_control]
+disable = "invalid-name, redefined-outer-name, missing-module-docstring, missing-function-docstring, missing-class-docstring, W0703"
+logging-format-style = "percent"
+
+[tool.pylint.design]
+min-public-methods = 0
+
+[tool.pylint.format]
+max-line-length = 120
+indent-string = '    '
+single-quotes = true
+
+[tool.pylint.extensions]
+extension-pkg-allow-list = ["pydantic"]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 88
