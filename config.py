@@ -51,5 +51,3 @@ config = Config()
 
 
 openai_config = config.openai
-
-print(openai_config)
